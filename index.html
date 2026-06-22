@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Quiz Interface</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="quiz-container" id="quiz-box">
+        
+        <div id="setup-screen" class="screen active">
+            <h1>QuizMaster</h1>
+            <p class="subtitle">Test your knowledge across multiple domains</p>
+            
+            <div class="form-group">
+                <label for="category">Select Domain</label>
+                <select id="category">
+                    <option value="18">Computer Science & Tech</option>
+                    <option value="9">General Knowledge</option>
+                    <option value="17">Science & Nature</option>
+                    <option value="23">History</option>
+                    <option value="22">Geography</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="difficulty">Select Difficulty</label>
+                <select id="difficulty">
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+            
+            <button id="start-btn" class="btn primary-btn">Launch Quiz</button>
+        </div>
+
+        <div id="loading-screen" class="screen">
+            <div class="spinner"></div>
+            <p>your questions are being prepared...</p>
+        </div>
+
+        <div id="question-screen" class="screen">
+            <div class="quiz-header">
+                <span id="progress-text">Question 1 of 10</span>
+                <span id="score-tracker">Score: 0</span>
+            </div>
+            <div class="progress-bar-wrap">
+                <div id="progress-bar-fill"></div>
+            </div>
+
+            <h2 id="question-text">Loading question query...</h2>
+            
+            <div id="options-container" class="options-grid">
+                </div>
+
+            <button id="next-btn" class="btn primary-btn hidden">Next Question</button>
+        </div>
+
+        <div id="results-screen" class="screen">
+            <h2>Quiz Finalized!</h2>
+            <div class="score-circle">
+                <span id="final-score">0</span>
+                <small>out of 10</small>
+            </div>
+            <p id="performance-feedback">Analyzing performance data...</p>
+            <button id="restart-btn" class="btn secondary-btn">Try New Domain</button>
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
